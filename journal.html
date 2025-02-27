@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Journal - Wellness Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="loadUser()">
+
+    <header>
+        <h1>Anonymous Journal</h1>
+    </header>
+
+    <main class="journal-container">
+        <h2 id="greeting"></h2>
+        <p>We know you are doing your best. This is your safe space. Write your thoughts, free your mind, and breathe easy.</p>
+
+        <!-- Input for Title & Thought -->
+        <div class="entry-form">
+            <input type="text" id="journalTitle" placeholder="Title">
+            <textarea id="journalEntry" placeholder="Write your thoughts..."></textarea>
+            <button onclick="addEntry()">Save Entry</button>
+        </div>
+
+        <!-- Entries List -->
+        <h2>Your Journal Entries</h2>
+        <!-- Search Bar -->
+<input type="text" id="searchBar" placeholder="Search entries by title..." onkeyup="searchEntries()">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="entriesList"></tbody>
+        </table>
+        <!-- Modal for Viewing Entries -->
+<div id="viewModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+
+
+
+<!-- Buttons for Loading More & Less Entries -->
+<button id="seeMoreBtn" onclick="showMoreEntries()">⬇ See More</button>
+<button id="seeLessBtn" onclick="showLessEntries()" style="display: none;">⬆ See Less</button>
+
+    </main>
+
+    <footer>
+        <p>Wellness Center IIT ROORKEE</p>
+        <a href="https://www.instagram.com/wellnessiitr" target="_blank">Instagram</a> |
+        <a href="https://wellness.iitr.ac.in/" target="_blank">Official Website</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
