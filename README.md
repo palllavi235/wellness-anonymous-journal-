@@ -1,1 +1,3 @@
-# wellness-anonymous-journal-
+# wellness-anonymous-journal- webpage 
+you can  write your feeling freely and be relax ....
+Write hard and clear about what hurts
